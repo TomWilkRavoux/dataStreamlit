@@ -1,0 +1,24 @@
+# Bronze — JSON bruts (32 GB)
+data/
+
+# Silver — Parquet (3.4 GB)
+outputParquetV3/
+outputParquetV3Test/
+output_demo/
+
+# DuckDB (176 MB, regenerable via dbt)
+*.duckdb
+*.duckdb.tmp
+*.duckdb.wal
+
+# dbt artifacts (regenerable via dbt build)
+dbt_spotify/target/
+dbt_spotify/logs/
+dbt_spotify/.user.yml
+
+# Python
+__pycache__/
+*.pyc
+
+# Claude Code
+.claude/

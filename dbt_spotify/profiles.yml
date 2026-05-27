@@ -1,0 +1,7 @@
+dbt_spotify:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../spotify_stream.duckdb
+      threads: 1

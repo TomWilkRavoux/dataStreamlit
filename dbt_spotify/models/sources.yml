@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: spotify_stream
+    database: spotify_stream
+    schema: main
+    tables:
+      - name: v_tracks
+        description: "Vue Silver — tracks par playlist"
+        columns:
+          - name: playlist_id
+            tests: [not_null]
+          - name: track_uri
+            tests: [not_null]
+          - name: duration_ms
+            tests: [not_null]
+      - name: v_playlists
+        description: "Vue Silver — metadata playlists"
+        columns:
+          - name: playlist_id
+            tests: [not_null, unique]
+          - name: num_followers
+            tests: [not_null]
