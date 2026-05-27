@@ -5,3 +5,6 @@ dbt_spotify:
       type: duckdb
       path: ../spotify_stream.duckdb
       threads: 1
+      settings:
+        memory_limit: '3GB'
+        preserve_insertion_order: false
